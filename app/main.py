@@ -4,7 +4,7 @@ from teapot import ESPTeapot
 
 app = Flask(__name__)
 Teapot_address = 'http://192.168.1.'
-
+teapot = ESPTeapot(url=Teapot_address)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -32,5 +32,4 @@ def teapot_is_ready():
 
 
 if __name__ == '__main__':
-    teapot = ESPTeapot(url=Teapot_address)
     app.run()
