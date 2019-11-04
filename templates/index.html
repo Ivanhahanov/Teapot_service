@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="POST">
+    <!-- скрытый параметр -->
+    <input type="hidden" name="index" value="start">
+    <p><input type="number" size="3" name="temp" min="1" max="100" value="100"></p>
+    <input type="submit" class="btn btn-dark" value="Start">
+</form>
+<form action="/" method="POST">
+    <input type="hidden" name="index" value="check">
+    <input type="submit" class="btn btn-dark" value="Check Temp">
+</form>
+<form action="/" method="POST">
+    <input type="hidden" name="index" value="stop">
+    <input type="submit" class="btn btn-dark" value="Stop">
+</form>
+Status: {{ data.status }}<br>
+Temperature: {{ data.temp }}
+</body>
+</html>
